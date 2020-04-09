@@ -11,7 +11,7 @@ price = ["$6558.07", "$468.95", "$0.487526", "$762.84", "$8.86", "$85.26", "$0.1
  
 
 # La ou les crypto qui ont la plus grosse valeur.
-price2 = price.map {|element| element.gsub(/[$]/,"")}
+price2 = price.map {|element| element.gsub("$","")}
 price2 = price2.map(&:to_f)
 hash_value_2 = Hash[*devise.zip(price2).flatten]
 max = hash_value_2.values.max
